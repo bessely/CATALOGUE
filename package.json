@@ -1,7 +1,7 @@
 {
   "name": "CATALOGUE",
   "description": "Toutes les applications SYNAPSE GROUPE.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "useAlerte":true,
   "private": true,
   "dependencies": {
