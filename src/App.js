@@ -13,8 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import CustomLoader from './globalComponents/CustomLoader';
 // import SessionTimeOut from "./globalComponents/SessionTimeOut";
 import RoutesApp from "./routes/Routes";
-import { pageSurveillance } from "./services/Utilisateur";
-import { getCurrentPath, packageJSON } from "./services/globalFunction";
+import { getCurrentPath, goTo, packageJSON } from "./services/globalFunction";
 import { Store } from "./store/Store";
 
 /**
@@ -31,10 +30,8 @@ function App() {
       console.error = function() {}; // desactive tous les console.error en production
       console.warn  = function() {}; // desactive tous les console.warn en production
     }
-    if (getCurrentPath() !== "Connexion" && getCurrentPath() !== "Forget" && getCurrentPath() !== "PageNotFound") {
-      //LES FONCTION DE PROTECTION DE LA SESSION EN COURS
-      // sessionSurveillance();
-      pageSurveillance(getCurrentPath());
+    if ((getCurrentPath()).toLowerCase()!=="") { // si on est pas deja sur la page de satisfaction 
+      goTo("/"); // retour vers la page de dashbord quelque soit l'addresse saisie
     }
   }, []);
   return (
@@ -42,9 +39,6 @@ function App() {
       {
         getCurrentPath() !== "Connexion" && getCurrentPath() !== "Forget" && getCurrentPath() !== "PageNotFound" ? 
           <>
-            {/* TOUS CES COMPOSANTS SONT DISPONIBLES DE FACON GLOBAL DANS L'APPLICATION*/}
-            {/* <Compte /> */}
-            {/* <SessionTimeOut /> */}
             <CustomLoader/>
           </>
         :

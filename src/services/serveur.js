@@ -1,3 +1,5 @@
+import { packageJSON } from "./globalFunction";
+
 const SERVEUR = {
       "HOSTNAME"           : window.location.hostname, // HOST NAME WEB
       "SYNAPSE"            : "160.155.220.179", //<- SERVEUR IP WOLD WILD WEB
@@ -12,11 +14,11 @@ const SERVEUR = {
       "PROTOCOL"           : window.location.protocol+"//" // http: || https:
 };
 var  BASEURL  =`${SERVEUR.PROTOCOL}${SERVEUR.SYNAPSE}:${SERVEUR.PORT}/synapse`;
-var  BASEROOT ="/"; // le chemin vers le htdoc : le nom du dossier dans htdoc
+var  BASEROOT =packageJSON.homepage; // le chemin vers le htdoc : le nom du dossier dans htdoc
 var  LOGO_URL =`${SERVEUR.PROTOCOL}${SERVEUR.SYNAPSE}:83/SERVEUR_IMG/logo/getlogo/`;
 if (process.env.NODE_ENV==="development") {
       BASEURL  = `${SERVEUR.PROTOCOL}${SERVEUR.SYNAPSE}:${SERVEUR.PORT}/synapse`;
-      BASEROOT ="/"; // le chemin vers le htdoc : le nom du dossier dans htdoc
+      BASEROOT =packageJSON.homepage; // le chemin vers le htdoc : le nom du dossier dans htdoc
 }
 
 export { BASEROOT, BASEURL, LOGO_URL, SERVEUR };

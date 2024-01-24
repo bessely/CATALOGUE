@@ -53,6 +53,14 @@ export function getCurrentPath(){
     return pathname.split("/").pop();
 }
 
+export function goTo(url){
+    if (url===undefined || url==="" || url.toLowerCase()==="/"+(getCurrentPath().toLowerCase())) {
+        // window.location.reload()
+        return;
+    }
+    window.location.href = "/CATALOGUE"+url;
+}
+
 /**RETOURNE LA RACINE DE L'URL
  * 
  * @returns 
