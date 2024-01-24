@@ -1,0 +1,28 @@
+RELEASE NOTES 
+CONVERGENCE APP WEB DE RAPPROCHEMENT BANCAIRE
+FRONT-DEV : YAO BESSELY SUNDAY JUNIOR
+BACK-DEV  : KOUASSI MAYI AXEL
+            YODA HAMED
+
+
+3.0.7 (14-08-2023)
+-----------------------------
+
+-Bug fixes
+        |- Vidage des champs DEVISE & SENS de la modal de création des correspondants après fermeture
+        |- Correction bug sur les menus qui ne saffichaient pas correctement 
+        |- listCompte mise à jour du back : dans le solde mirroir  on recevait le solde nostro
+- Amélioration de code 
+
+3.0.8 (06-09-2023)
+-----------------------------
+
+- Rajout de nouvelles Fonctionalités
+        |- Suppression d'une ligne d'opération rejetée 
+        |- Suppression en masse des opérations rejetées à partir d'un CTRL+clique sur l'entête de l'opération rejettée
+        |- retrait de la possibilité de suppression individuelle d'une opération rejettée en Nostro comme en Mirroir
+        |- Affichage de la version de convergence sur la page de connexion et dans le footer
+        |- Mise a jour de la documentation de convergence
+        |- Ajout du composant total en double dans la section de traitement des rapprochements dans la fenetre Rapprochement
+        |- Ajout du composant total en double dans la section de d'affichage des opérations en attente dans la fenetre Rapprochement
+- Amélioration de code 

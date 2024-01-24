@@ -1,0 +1,37 @@
+:root {
+        --vistaPrimary       : #FC003B;
+        --vistaSecondary     : #B02336;
+        --S_Primary          : #154d3b;
+        --S_Secondary        : #154d3b;
+        --S_Success          : #00734e;
+        --S_Dark             : #365148;
+        --gray               : #888ea8;
+        --grayLight          : #9c9c9c;
+        --grayLight2         : #343131e1;
+        --white              : #FFFFFF;
+        --blue               : #1b55e2;
+        --loaderBgBao        : rgb(113, 217, 210, 0.2);
+        --loaderBgVista      : rgba(245, 145, 161, 0.6);
+        --accente            : var(--S_Secondary);
+        --accente2           : #FF8D00;
+        --accentelight       : #f7ba7028;
+        --heroSignatureColor : #00b269;
+        --classicDanger      : #e7515a;
+}
+/*Lien LOCAL de la police du projet*/
+@font-face {
+        font-family: "Quicksand";
+        src: url("fonts/fonts/Quicksand-SemiBold.ttf");
+}
+/*La Police dans tt le projet*/
+body {
+        font-family:'Quicksand' !important;
+}
+/* footer SYNAPSE */
+.copyrightdate.text-danger{
+        color: var(--S_Secondary) !important;
+}
+
+hr{
+        border-color: var(--S_Secondary) !important;
+}
